@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>timer</title>   
+         <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Google_Classroom_icon.svg/1200px-Google_Classroom_icon.svg.png" 
+    </head>
+
+    <body>
+        <p1>This is how long is left until the weekend.</p1>
+        <p2>Once over timer will reset on monday.</p2>
+    <BODY bgcolor=”green”> 
+  <p id="demo"></p>
+
+<script>
+    width= 500
+var countDownDate = new Date("Sep 30, 2022 00:16:00").getTime();
+
+var x = setInterval(function() {
+
+ 
+  var now = new Date().getTime();
+
+ 
+  var distance = countDownDate - now;
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000); 
+
+  
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Enjoy Your Weekend!";
+  }
+}, 1000);
+    
+    
+</script>
+         <input type="text" name="Specfiy Image Border" alt="text" id="home">  
+         <input type="submit" name="Specfiy Image Border" onclick="pop()" alt="text"> 
+        
+        <script>
+            let i = 1
+            function pop(){
+
+            if (document.getElementById('home').value == 'work'){
+                window.location.href = 'work3.html'
+            }else if (i > 3) alert('Do your work'); else alert (['??','uh','stop'][i - 1]); i++
+            }
+            </script>
+    </body>
+</html>
